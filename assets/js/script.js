@@ -66,6 +66,6 @@ function deleteActivity(event) {
     activityFormEl[0].reset();
   }
 
-activityFormEl.on('submit', submitActivity);
+activityFormEl.on('submitBtn', submitActivity);
 activityDisplayEl.on('click', '.delete-activity-btn', deleteActivity);
 
