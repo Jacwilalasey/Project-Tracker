@@ -9,13 +9,12 @@ setInterval(update, 1000);
 var activityModalEl = $("#activity-modal");
 var activityDisplayEl = $("#activity-display")
 var activityFormEl = $("#activityForm")
-var activityNameEL = $("#activity-name-input");
+var activityNameEl = $("#activity-name-input");
 var activityTypeEl = $("#activity-type-input");
 var allocatedTimeEl = $("#allocated-time-input");
 var dueDateEl = $("#due-date-input");
 var closeFormEl = $("#closeBtn");
 var submitFormEl = $("#submitBtn");
-// var deleteActivity = $("")
 
 // print activity data to the page
 function printActivityData(name, type, time, date) {
@@ -27,8 +26,7 @@ function printActivityData(name, type, time, date) {
     var activityDateTd = $('<td>').addClass('p-2').text(date);
     var daysToDateTd = moment(date, 'DD/MM/YY').diff(moment(), 'days');
     var dayLeftTd = $('<td>').addClass('p-2').text(daysToDateTd);
-    var deleteActivityBtn = $('<td>').addClass('p-2 delete-activity-btn text-center')
-    .button('Remove');
+    var deleteActivityBtn = $('<td>').addClass('p-2 delete-activity-btn text-center').button('Remove');
 
     activityRowEl.append(
         activityNameTd,
@@ -66,6 +64,6 @@ function deleteActivity(event) {
     activityFormEl[0].reset();
   }
 
-activityFormEl.on('submitBtn', submitActivity);
+submitFormEl.on('click', submitActivity);
 activityDisplayEl.on('click', '.delete-activity-btn', deleteActivity);
 
