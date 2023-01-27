@@ -45,29 +45,32 @@
                                 <span aria-hidden="true">&times;</span>
                               </button>
                             </div>
-                            <div class="modal-body">
-                              <div class="form-group">
-                                <label for="activity-name-input">Activity name</label>
-                                <input type="text" id="activity-name-input" class="form-control" placeholder="Enter the activity's name" required>
-                              </div>
-                              <div class="form-group">
-                                <label for="activity-type-input">Activity type</label>
-                                <input id="activity-type-input" class="form-control" placeholder="Enter the type of activity" required>
-                              </div>
-                              <div class="form-group">
-                                <label for="allocated-time-input">Allocated time (Hours)</label>
-                                <input type="number" id="allocated-time-input" class="form-control" placeholder="How long do you want to spend on it?" required>
-                              </div>
-                              <div class="form-group">
-                                <label for="due-date-input">Due date</label>
-                                <input type="text" id="due-date-input" class="form-control" placeholder="Enter a date to have this completed by" required>
-                              </div>
+                            <form id="activityForm"></form>
+                                <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="activity-name-input">Activity name</label>
+                                    <input type="text" id="activity-name-input" class="form-control" placeholder="Enter the activity's name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="activity-type-input">Activity type</label>
+                                    <input id="activity-type-input" class="form-control" placeholder="Enter the type of activity" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="allocated-time-input">Allocated time (Hours)</label>
+                                    <input type="number" id="allocated-time-input" class="form-control" placeholder="How long do you want to spend on it?" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="due-date-input">Due date</label>
+                                    <input type="date" id="due-date-input" class="form-control" placeholder="Enter a date to have this completed by" required>
+                                </div>
 
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-primary">Submit Activity</button>
-                            </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" id="closeBtn" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button"
+                                    id="submitBtn" class="btn btn-primary">Submit Activity</button>
+                                </div>
+                            </form>
                           </div>
                         </div>
                       </div>
